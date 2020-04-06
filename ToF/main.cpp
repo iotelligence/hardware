@@ -43,7 +43,7 @@ std::vector<std::string> CLIENT_ID = {  "ff56abf3-f01e-4d50-bfb3-8090a87bd846" }
 
 std::vector<std::string> NETPIE_TOKEN = { "y2eyNmnZwNnxhVev1X9mqKjnvWm4HSqS" };
 
-std::vector<std::string> MQTT_TOPIC = { "@msg/taist2020/board/F_1"};
+std::vector<std::string> MQTT_TOPIC = { "@msg/taist2020/board/F1_1"};
 
 int8_t name = Names::toa;
 int8_t device_id = name;
