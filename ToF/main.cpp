@@ -43,7 +43,7 @@ std::vector<std::string> CLIENT_ID = {  "ff56abf3-f01e-4d50-bfb3-8090a87bd846" }
 
 std::vector<std::string> NETPIE_TOKEN = { "y2eyNmnZwNnxhVev1X9mqKjnvWm4HSqS" };
 
-std::vector<std::string> MQTT_TOPIC = { "@msg/ict710"};
+std::vector<std::string> MQTT_TOPIC = { "@msg/taist2020/board/F_1"};
 
 int8_t name = Names::toa;
 int8_t device_id = name;
@@ -129,16 +129,16 @@ int main() {
 
         if(distance >= 1500){
             printf("\n\rAvailable");
-            sprintf(buf, "Available");
+            sprintf(buf, "{\"data\":\"available\"}");
         } else { 
             printf("\n\rOccupied");
-            sprintf(buf, "Occupied");
+            sprintf(buf, "{\"data\":\"occupied\"}");
             
         }
     #endif
         message.payload = (void*)buf;
         message.payloadlen = strlen(buf)+1;
-        message.qos = MQTT::QOS0;
+        message.qos = MQTT::QOS1;
         message.retained = false;
         message.dup = false;
 
